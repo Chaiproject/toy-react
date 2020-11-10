@@ -78,15 +78,13 @@ export class Component {
       
     }
     let vdom = this.vdom
-    update(this._vdom, this.vdom)
+    update(this._vdom, vdom)
     this._vdom = vdom
   }
   /*
   rerender() {
     let oldRange = this._range
-
     let range = document.createRange()
-
     range.setStart(oldRange.startContainer, oldRange.startOffset)
     range.setEnd(oldRange.startContainer, oldRange.startOffset)
     this[RENDER_TO_DOM](range)
